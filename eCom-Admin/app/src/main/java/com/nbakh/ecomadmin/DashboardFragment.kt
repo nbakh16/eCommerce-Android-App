@@ -42,7 +42,7 @@ class DashboardFragment : Fragment() {
             DashboardItemType.ADD_PRODUCT -> findNavController().navigate(R.id.action_dashboardFragment_to_addProductFragment)
             DashboardItemType.VIEW_PRODUCT -> findNavController().navigate(R.id.action_dashboardFragment_to_viewProductFragment)
             DashboardItemType.CATEGORY -> findNavController().navigate(R.id.action_dashboardFragment_to_categoryFragment)
-            //DashboardItemType.LOGOUT -> FirebaseAuth.getInstance().signOut()
+            DashboardItemType.LOGOUT -> loginViewModel.logout()
         }
     }
 }

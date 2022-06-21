@@ -1,9 +1,12 @@
 package com.nbakh.ecomadmin.viewmodel
 
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.nbakh.ecomadmin.LoginFragment
 import com.nbakh.ecomadmin.utils.collectionAdmin
 
 class LoginViewModel : ViewModel() {
@@ -40,5 +43,10 @@ class LoginViewModel : ViewModel() {
             .addOnFailureListener {
                 errMsgLD.value = it.localizedMessage
             }
+    }
+
+    fun logout(){
+        firebaseAuth.signOut()
+        authStateLD.value = AuthState.UNAUTHENTICATED
     }
 }
