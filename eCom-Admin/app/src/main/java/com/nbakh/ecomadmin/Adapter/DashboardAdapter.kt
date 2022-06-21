@@ -5,12 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.nbakh.ecomadmin.databinding.DashboardItemRowBinding
 import com.nbakh.ecomadmin.model.DashboardItem
+import com.nbakh.ecomadmin.model.DashboardItemType
 import com.nbakh.ecomadmin.model.dashboardItemList
 
-class DashboardItemAdapter : RecyclerView.Adapter<DashboardItemAdapter.DashboardItemViewHolder>(){
+class DashboardAdapter(val callback: (DashboardItemType) -> Unit) : RecyclerView.Adapter<DashboardAdapter.DashboardItemViewHolder>(){
 
-    class DashboardItemViewHolder(val binding: DashboardItemRowBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: DashboardItem){
+
+    class DashboardItemViewHolder(val binding: DashboardItemRowBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: DashboardItem) {
             binding.item = item
         }
     }
@@ -25,8 +27,10 @@ class DashboardItemAdapter : RecyclerView.Adapter<DashboardItemAdapter.Dashboard
     override fun onBindViewHolder(holder: DashboardItemViewHolder, position: Int) {
         val item = dashboardItemList.get(position)
         holder.bind(item)
+        holder.itemView.setOnClickListener {
+            callback(item.type)
+        }
     }
 
     override fun getItemCount() = dashboardItemList.size
-
 }

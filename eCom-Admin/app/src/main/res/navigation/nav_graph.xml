@@ -13,10 +13,34 @@
         <action
             android:id="@+id/action_dashboardFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_viewProductFragment"
+            app:destination="@id/viewProductFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.nbakh.ecomadmin.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/viewProductFragment"
+        android:name="com.nbakh.ecomadmin.ViewProductFragment"
+        android:label="View Product"
+        tools:layout="@layout/fragment_view_product" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.nbakh.ecomadmin.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.nbakh.ecomadmin.AddProductFragment"
+        android:label="Add Product"
+        tools:layout="@layout/fragment_add_product" />
 </navigation>
