@@ -1,6 +1,5 @@
 package com.nbakh.ecomadmin.utils
 
-const val TAG = "MadBatch03"
 const val collectionAdmin = "Admins"
 const val collectionProduct = "Products"
 const val collectionPurchase = "Purchase"

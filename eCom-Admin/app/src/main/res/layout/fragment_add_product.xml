@@ -102,6 +102,8 @@
                         android:id="@+id/captureBtn"
                         android:text="Capture"
                         android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         style="@style/Widget.AppCompat.Button.Borderless" />
 
                     <Button
@@ -110,6 +112,8 @@
                         android:id="@+id/galleryBtn"
                         android:text="Select from Gallery"
                         android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         style="@style/Widget.AppCompat.Button.Borderless" />
                 </LinearLayout>
 
@@ -118,8 +122,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/saveBtn"
                     android:text="Save Product"
-                    android:textColor="@color/black"
-                    style="@style/Widget.AppCompat.Button.Borderless" />
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="25dp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
