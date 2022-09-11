@@ -6,13 +6,9 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        tools:context=".AddProductFragment">
-
+        android:layout_height="match_parent">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -39,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/nameInputET"
-                    android:hint="Product Name" />
+                    android:hint="Product Name"/>
 
                 <EditText
                     android:layout_width="match_parent"
@@ -53,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/purchasePriceInputET"
-                    android:hint="Purchase Price" />
+                    android:hint="Purchase Price"/>
 
                 <EditText
                     android:inputType="numberDecimal"
@@ -127,5 +123,12 @@
                     android:layout_marginTop="25dp"/>
             </LinearLayout>
         </ScrollView>
-    </LinearLayout>
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/mProgressBar"/>
+    </RelativeLayout>
+
 </layout>

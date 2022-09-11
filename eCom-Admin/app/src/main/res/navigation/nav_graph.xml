@@ -32,7 +32,11 @@
         android:id="@+id/viewProductFragment"
         android:name="com.nbakh.ecomadmin.ViewProductFragment"
         android:label="View Product"
-        tools:layout="@layout/fragment_view_product" />
+        tools:layout="@layout/fragment_view_product" >
+        <action
+            android:id="@+id/action_viewProductFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.nbakh.ecomadmin.CategoryFragment"
@@ -43,4 +47,9 @@
         android:name="com.nbakh.ecomadmin.AddProductFragment"
         android:label="Add Product"
         tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.nbakh.ecomadmin.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
 </navigation>
