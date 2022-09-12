@@ -14,6 +14,9 @@ All data stores in Firestore Database
 - View users usage status
 - Update orders
 
+<br />
+<br />
+
 **User App:**
 - Login/Register
 - View listed products
