@@ -10,9 +10,8 @@ All data stores in Firestore Database
 - View orders
 
 *upcoming*
-- Manage users
+- Manage orders
 - View users usage status
-- Update orders
 
 <br />
 <br />
