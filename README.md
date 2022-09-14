@@ -20,9 +20,9 @@ All data stores in Firestore Database
 **User App:**
 - Login/Register
 - View listed products
+- Add product to cart
 
 *upcoming*
-- Add product to cart
 - Manage profile
 - Track order status
 - favorite a product
