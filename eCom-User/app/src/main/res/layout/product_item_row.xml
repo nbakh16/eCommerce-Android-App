@@ -52,7 +52,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/productRowCartBtn"
                 android:layout_gravity="end"
-                android:text="add to cart"
                 app:backgroundTint="@color/teal_200"
                 android:textColor="@color/black"/>
         </LinearLayout>

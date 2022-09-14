@@ -6,4 +6,7 @@
     <item android:title="@string/my_orders"
         android:id="@+id/userOrderListFragment"
         android:icon="@drawable/ic_baseline_attach_money_24"/>
+    <item android:title="@string/logout"
+        android:id="@+id/userLogout"
+        android:icon="@drawable/ic_baseline_logout_24"/>
 </menu>
