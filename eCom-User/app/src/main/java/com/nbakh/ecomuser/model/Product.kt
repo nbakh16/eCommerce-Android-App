@@ -7,5 +7,6 @@ data class Product(
     var description: String? = null,
     var salePrice: Double = 0.0,
     var imageUrl: String? = null,
-    var isAvailable: Boolean = true
+    var available: Boolean = true,
+    var inCart: Boolean = false
 )

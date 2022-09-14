@@ -13,8 +13,6 @@ import java.io.ByteArrayOutputStream
 
 class ProductViewModel : ViewModel() {
     val repository = ProductRepository()
-    val productListLD: MutableLiveData<List<Product>> = MutableLiveData()
-    val purchaseListLD: MutableLiveData<List<Purchase>> = MutableLiveData()
     val errMsgLD = MutableLiveData<String>()
     val statusLD = MutableLiveData<String>()
 
@@ -24,7 +22,7 @@ class ProductViewModel : ViewModel() {
 
     fun uploadImage(bitmap: Bitmap, callback: (String) -> Unit) {
         val photoRef = FirebaseStorage.getInstance().reference
-            .child("images/${System.currentTimeMillis()}")
+            .child("userimages/${System.currentTimeMillis()}")
         val baos = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.JPEG, 75, baos)
         val data: ByteArray = baos.toByteArray()
@@ -46,12 +44,6 @@ class ProductViewModel : ViewModel() {
         }
     }
 
-    fun addNewProduct(product: Product, purchase: Purchase, callback: (String) -> Unit) {
-        repository.addNewProduct(product, purchase, callback)
-    }
-
-    fun addRepurchase(purchase: Purchase) = repository.addRePurchase(purchase)
     fun getProducts() = repository.getAllProducts()
     fun getProductById(id:String) = repository.getProductById(id)
-    fun getPurchaseListByProductId(id:String) = repository.getPurchaseByProductId(id)
 }

@@ -8,15 +8,59 @@
     <fragment
         android:id="@+id/productListFragment"
         android:name="com.nbakh.ecomuser.ProductListFragment"
-        android:label="fragment_product_list"
+        android:label="Product List"
         tools:layout="@layout/fragment_product_list" >
         <action
             android:id="@+id/action_productListFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_cartListFragment2"
+            app:destination="@id/cartListFragment2" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.nbakh.ecomuser.LoginFragment"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.nbakh.ecomuser.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/cartListFragment2"
+        android:name="com.nbakh.ecomuser.CartListFragment"
+        android:label="Cart List"
+        tools:layout="@layout/fragment_cart_list" >
+        <action
+            android:id="@+id/action_cartListFragment2_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.nbakh.ecomuser.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderSuccessfulFragment"
+            app:destination="@id/orderSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessfulFragment"
+        android:name="com.nbakh.ecomuser.OrderSuccessfulFragment"
+        android:label="Order Successful"
+        tools:layout="@layout/fragment_order_successful" />
+    <fragment
+        android:id="@+id/userProfileFragment2"
+        android:name="com.nbakh.ecomuser.UserProfileFragment"
+        android:label="User Profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/userOrderListFragment2"
+        android:name="com.nbakh.ecomuser.UserOrderListFragment"
+        android:label="User Order List"
+        tools:layout="@layout/fragment_user_order_list" />
 </navigation>

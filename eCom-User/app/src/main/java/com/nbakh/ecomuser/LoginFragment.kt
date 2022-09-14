@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.nbakh.ecomuser.databinding.FragmentLoginBinding
@@ -31,6 +32,14 @@ class LoginFragment : Fragment() {
             val email = binding.emailET.text.toString()
             val password = binding.passET.text.toString()
             // TODO: validate fields
+            if(email.isEmpty()){
+                Toast.makeText(requireActivity(), "Please enter your email address!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if(password.isEmpty()){
+                Toast.makeText(requireActivity(), "Please enter your password!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             loginViewModel.loginUser(email, password)
         }
 
@@ -38,6 +47,14 @@ class LoginFragment : Fragment() {
             val email = binding.emailET.text.toString()
             val password = binding.passET.text.toString()
             // TODO: validate fields
+            if(email.isEmpty()){
+                Toast.makeText(requireActivity(), "Please enter your email address!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if(password.isEmpty()){
+                Toast.makeText(requireActivity(), "Please enter a password!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             loginViewModel.registerUser(email, password)
         }
 
